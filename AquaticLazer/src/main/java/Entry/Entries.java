@@ -21,8 +21,8 @@ public class Entries {
     public String[] contents;
     public int repcount = 0;
     
-    Entries(String name) {
-        this.name = name;
+    Entries() {
+        
     }
 
     void readFileContents() {
