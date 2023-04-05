@@ -22,8 +22,7 @@ import java.util.function.Consumer;
 public class RemoteEntry extends Entries{
     String repositoryID;
     String entryID;
-    public RemoteEntry(String name, String repositoryID, String entryID) {
-        super(name);
+    public RemoteEntry(String repositoryID, String entryID) {
         this.repositoryID = repositoryID;
         this.entryID = entryID;
         this.path = JavierFunction(repositoryID); // this needs to be updated with javier's function
@@ -31,6 +30,7 @@ public class RemoteEntry extends Entries{
         
         file = new File(path);
         length = file.length();
+        name = file.getName();
         isDirectory = file.isDirectory();
         
         if (isDirectory) {
