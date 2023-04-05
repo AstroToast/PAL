@@ -20,10 +20,10 @@ import java.util.Arrays;
  */
 public class LocalEntry extends Entries {
     
-    public LocalEntry(String name, String path){
-        super(name);
+    public LocalEntry(String path){
         this.path = path;
         file = new File(path);
+        name = file.getName();
         length = file.length();
         isDirectory = file.isDirectory();
         
